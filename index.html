@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <!-- Sidebar start -->
+    <section class="main-container">
+      <!-- <img src="assets/images/bg-sidebar-desktop.svg" alt="" /> -->
+      <nav class="sidebar">
+        <ul>
+          <li class="steps">
+            <span class="steps-bullet active-step">1</span>
+            <div class="steps-content">
+              <p class="steps-header">STEP 1</p>
+              <p class="steps-text">YOUR INFO</p>
+            </div>
+          </li>
+          <li class="steps">
+            <span class="steps-bullet">2</span>
+            <div class="steps-content">
+              <p class="steps-header">STEP 2</p>
+              <p class="steps-text">SELECT PLAN</p>
+            </div>
+          </li>
+          <li class="steps">
+            <span class="steps-bullet">3</span>
+            <div class="steps-content">
+              <p class="steps-header">STEP 3</p>
+              <p class="steps-text">ADD-ONS</p>
+            </div>
+          </li>
+          <li class="steps">
+            <span class="steps-bullet">4</span>
+            <div class="steps-content">
+              <p class="steps-header">STEP 4</p>
+              <p class="steps-text">SUMMARY</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Sidebar end -->
+
+      <!-- Input Field Start-->
+      <section class="input-container">
+        <div class="input-title-container">
+          <p class="input-title-header">Personal Info</p>
+          <p class="input-title-text">
+            Please provide your name, email address and phone number.
+          </p>
+        </div>
+
+        <form action="#" id="input-form">
+          <!--step 1 start-->
+          <div class="input-fields">
+            <div class="step-1-input-field">
+              <label for="name" class="step-1-label">Name</label>
+              <span class="required-text required-text-1"
+                >This field is required</span
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="step-1-input"
+                placeholder="e.g.Stephen King"
+                required
+              />
+              <label for="email" class="step-1-label">Email Address</label>
+              <span class="required-text required-text-2"
+                >This field is required</span
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="step-1-input"
+                placeholder="e.g.stephenking@lorem.com"
+                required
+              />
+              <label for="phone" class="step-1-label">Phone Number</label>
+              <span class="required-text required-text-3"
+                >This field is required</span
+              >
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="step-1-input"
+                placeholder="e.g.+1 234 567 890"
+                required
+              />
+            </div>
+          </div>
+          <!--step 1 end-->
+
+          <!--step 2 start-->
+          <div class="step-2-input-field input-fields">
+            <div class="billing-plans-wrapper">
+              <div class="billing-plan-containers">
+                <img
+                  src="/assets/images/icon-arcade.svg"
+                  alt="billing-plan-1-icon"
+                  class="billing-plan-1-icon"
+                />
+
+                <div class="billing-plan-details">
+                  <input
+                    type="radio"
+                    name="billing-plans"
+                    value="90"
+                    ;
+                    id="billing-plan-1"
+                    class="billing-plans"
+                    autocomplete="off"
+                    required
+                  /><label for="billing-plan-1" class="billing-plans-labels"
+                    >Arcade</label
+                  >
+                  <p class="billing-plan-details-annual-plan-price">$90/yr</p>
+                  <p class="billing-plan-details-annual-plan-2months-free-text">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+
+              <div class="billing-plan-containers">
+                <img
+                  src="/assets/images/icon-advanced.svg"
+                  alt="billing-plan-2-icon"
+                  class="billing-plan-2-icon"
+                />
+
+                <div class="billing-plan-details">
+                  <input
+                    type="radio"
+                    name="billing-plans"
+                    id="billing-plan-2"
+                    value="120"
+                    class="billing-plans"
+                    autocomplete="off"
+                    checked
+                    required
+                  /><label for="billing-plan-2" class="billing-plans-labels"
+                    >Advanced</label
+                  >
+                  <p class="billing-plan-details-annual-plan-price">$120/yr</p>
+                  <p class="billing-plan-details-annual-plan-2months-free-text">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+
+              <div class="billing-plan-containers">
+                <img
+                  src="/assets/images/icon-pro.svg"
+                  alt="billing-plan-3-icon"
+                  class="billing-plan-3-icon"
+                />
+
+                <div class="billing-plan-details">
+                  <input
+                    type="radio"
+                    name="billing-plans"
+                    id="billing-plan-3"
+                    value="150"
+                    class="billing-plans"
+                    autocomplete="off"
+                    required
+                  /><label for="billing-plan-3" class="billing-plans-labels"
+                    >Pro</label
+                  >
+                  <p class="billing-plan-details-annual-plan-price">$150/yr</p>
+                  <p class="billing-plan-details-annual-plan-2months-free-text">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-switch-wrapper">
+              <p class="plan-text plan-text-monthly">Monthly</p>
+              <div class="switch-container">
+                <input
+                  type="checkbox"
+                  id="cup"
+                  class="switch-btn"
+                  checked
+                  autocomplete="off"
+                />
+                <label for="cup"></label>
+              </div>
+              <p class="plan-text plan-text-yearly plan-selected-yearly">
+                Yearly
+              </p>
+            </div>
+          </div>
+          <!-- step 2 end -->
+
+          <!-- step 3 start -->
+          <div class="step-3-input-field input-fields">
+            <div class="add-on-wrapper">
+              <div class="add-on-checkbox">
+                <input
+                  type="checkbox"
+                  name="add-ons"
+                  id="add-on-1"
+                  class="add-ons"
+                  value="10"
+                  data-addOn="addon-1"
+                />
+                <label for="add-on-1">
+                  <p class="add-on-header">Online service</p>
+                  <p class="add-on-detail">Access to multiplayer games</p>
+                </label>
+              </div>
+              <span class="add-on-price">+$10/yr</span>
+            </div>
+
+            <div class="add-on-wrapper">
+              <div class="add-on-checkbox">
+                <input
+                  type="checkbox"
+                  name="add-ons"
+                  class="add-ons"
+                  id="add-on-2"
+                  value="20"
+                  data-addOn="addon-2"
+                />
+                <label for="add-on-2">
+                  <p class="add-on-header">Larger storage</p>
+                  <p class="add-on-detail">Extra 1TB of cloud save</p>
+                </label>
+              </div>
+              <span class="add-on-price">+$20/yr</span>
+            </div>
+            <div class="add-on-wrapper">
+              <div class="add-on-checkbox">
+                <input
+                  type="checkbox"
+                  name="add-ons"
+                  id="add-on-3"
+                  class="add-ons"
+                  value="20"
+                  data-addOn="addon-3"
+                />
+                <label for="add-on-3">
+                  <p class="add-on-header">Customizable profile</p>
+                  <p class="add-on-detail">Custom theme on your profile</p>
+                </label>
+              </div>
+              <span class="add-on-price">+$20/yr</span>
+            </div>
+          </div>
+          <!-- step-3-end -->
+
+          <!-- step-4-start -->
+          <div class="step-4-field input-fields">
+            <div class="summary-container">
+              <div class="selected-plan">
+                <div>
+                  <p class="selected-plan-text">Arcade <span>(Yearly)</span></p>
+                  <p class="change-selected-plan-link">Change</p>
+                </div>
+                <span class="selected-plan-price">$90/yr</span>
+              </div>
+              <hr />
+              <!-- <div class="selected-add-on">
+                <span class="selected-add-on-name">Online service</span>
+                <span class="selected-add-on-price">+$10/yr</span>
+              </div>
+
+              <div class="selected-add-on">
+                <span class="selected-add-on-name">Larger storage</span>
+                <span class="selected-add-on-price">+$20/yr</span>
+              </div> -->
+            </div>
+            <div class="total-price-container">
+              <span class="total-price-text">Total(per year)</span>
+              <span class="total-price-number">$120/yr</span>
+            </div>
+          </div>
+          <!-- step-4-end -->
+        </form>
+
+        <div class="btn-container">
+          <button type="button" class="btn back-btn">Go Back</button>
+          <button type="button" class="btn next-btn">Next Step</button>
+        </div>
+        <!-- Input Field End-->
+
+        <div class="thank-you-section">
+          <img src="assets/images/icon-thank-you.svg" alt="icon-thank-you" />
+          <h2>Thank you!</h2>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
